@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+    
+    
+      <link href="/css/fonts.css" rel="stylesheet" type="text/css">
+    
+  
+
+  
+  <title>How to Use Hugo</title>
+
+  
+  
+  <link rel="stylesheet" href="/css/hugo-octopress.css">
+
+  
+  
+
+  
+    <link rel="stylesheet" href="/css/fork-awesome.min.css">
+  
+
+  
+  <link href="https://ylqi007.github.io/favicon.png" rel="icon">
+
+  
+  
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="">
+  <meta name="author" content="Author&#39;s name">
+
+  
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  
+
+  
+  
+</head>
+<body>
+
+
+<header role="banner">
+<hgroup>
+  
+  <h1><a href="https://ylqi007.github.io/">My New Hugo Site - Octopress</a></h1>
+    <h2>Subtitle appears under website title</h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+<fieldset class="mobile-nav">
+  
+  <select onchange="location = this.value;">
+    <option value="">Navigate…</option>
+      
+        <option value="https://ylqi007.github.io/">» Blog</option>
+      
+        <option value="https://www.google.com/">» Google</option>
+      
+        <option value="https://www.github.com/parsiya/hugo-octopress">» This theme on Github</option>
+      
+  </select>
+</fieldset>
+
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://ylqi007.github.io/" title="Blog">Blog</a></li>
+    
+  
+    
+      <li><a href="https://www.google.com/" title="Google"  target="_blank" >Google</a></li>
+    
+  
+    
+      <li><a href="https://www.github.com/parsiya/hugo-octopress" title="This theme on Github"  target="_blank" >This theme on Github</a></li>
+    
+  
+</ul>
+
+<ul class="subscription">
+  
+    
+        <a href="https://ylqi007.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+</ul>
+
+
+  <form action="https://www.google.com/search" method="get" target="_blank">
+    <fieldset role="search">
+      <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      <input type="hidden" name="q" value="site:https://ylqi007.github.io/" />
+    </fieldset>
+  </form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+        <header>
+          <h1 class="entry-title">
+            How to Use Hugo 
+          </h1>
+          <p class="meta">Dec 15, 2020 - 4 minute read - 
+
+          
+
+          </p>
+        </header>
+        <div class="entry-content">
+          
+          
+          
+          <p>[TOC]</p>
+<h2 id="1-quick-start">1. Quick Start</h2>
+<h3 id="11-install-hugo">1.1 Install Hugo</h3>
+<p><a href="https://gohugo.io/getting-started/installing/#debian-and-ubuntu">Hugo Install on Ubuntu</a></p>
+<h3 id="12-create-a-new-site">1.2 Create a New Site</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site quickstart
+</code></pre></div><ul>
+<li>The above will create a new Hugo site in a folder named <code>quickstart</code></li>
+</ul>
+<h3 id="13-add-a-theme">1.3 Add a Theme</h3>
+<p>First, download the theme from GitHub and add it to your site&rsquo;s <code>themes</code> directory</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#b58900">cd</span> quickstart
+git init
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+</code></pre></div><p>Then, add the theme to the site configuration:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#b58900">echo</span> <span style="color:#2aa198">&#39;theme = &#34;ananke&#34;&#39;</span> &gt;&gt; config.toml
+</code></pre></div><h3 id="14-add-some-content">1.4 Add Some Content</h3>
+<p>You can manually create content files (for example, <code>content/&lt;CATEGORY&gt;/&lt;FILE&gt;.&lt;FORMAT&gt;</code>) and provide metadata in them.</p>
+<p>You can also use the <code>new</code> command to do a few things, like adding title and date.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new posts/my-first-post.md
+hugo new articals/my-first-artical.md
+hugo new tutorials/my-first-turorial.md
+</code></pre></div><p>The newly created file will start with something like the following, and you can edit content file if you want.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;My First Post&#34;
+date: 2019-03-26T08:47:11+01:00
+draft: true
+---
+</code></pre></div><ul>
+<li><code>draft: true</code> means that this file does not get deployed. Once you finish a post, update the header of the post to `draft: false&rsquo;</li>
+</ul>
+<h3 id="15-start-the-hugo-server">1.5 Start the Hugo Server</h3>
+<p>Start the Hugo server with drafts enabled:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><h3 id="16-customize-the-theme">1.6 Customize the Theme</h3>
+<h4 id="site-configuration">Site Configuration</h4>
+<p>If you already have a domain ready, set the <code>baseURL</code>. Not that this value is not needed when running the local development server.</p>
+<h3 id="17-build-static-pages">1.7 Build Static Pages</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo -D
+</code></pre></div><p>This will output be in <code>./public/</code> directory by default. <code>-d/--destination</code> flag to change the default output directory, or set <code>publishdir</code> in the config file.</p>
+<h2 id="2-basic-usage">2. Basic Usage</h2>
+<h3 id="21-the-hugo-command">2.1 The <code>hugo</code> Command</h3>
+<p>The most common usage is probably to run <code>hugo</code> with the current directory being the input directory. (也就是直接运行 <code>hugo</code>)</p>
+<p>Running <code>hugo</code> generates your website to the <code>public/</code> directory by default, although you can customize the output directory.</p>
+<p>The command <code>hugo</code> renders your site into <code>public/</code> dire and is ready to be deployed to your web server. (<code>/public</code> 中的内容就可以部署到网站服务器上)</p>
+<h3 id="22-draft-future-and-expired-content">2.2 Draft, Future, and Expired Content</h3>
+<h3 id="23-deploy-your-website">2.3 Deploy Your Website</h3>
+<p>After running <code>hugo server</code> for local web development, you need to do a final <code>hugo</code> run without the <code>server</code> part of the command to rebuild your site. (<code>hugo server</code> 用于本地测试；<code>hugo</code> 用于创建将要部署到 web server 的文件内容).</p>
+<ul>
+<li>Running <code>hugo</code> does not remove generated files before building. This means that you should delete your <code>public/</code> directory before running the <code>hugo</code> command.</li>
+</ul>
+<p>You may then deploy your site by copying the <code>public/</code> directory to your production web server.</p>
+<p>Since Hugo generates a static website, your site can be hosted anywhere using any web server.</p>
+<h2 id="3-content-organization">3. Content Organization</h2>
+<p>Hugo assumes that the same structure that works to organize your source content is used to organize the rendered site. [Hugo假定使用用于组织源内容的相同结构来组织呈现的网站。]</p>
+<p><a href="https://gohugo.io/content-management/page-resources/">Page Resources</a></p>
+<p><a href="https://gohugo.io/content-management/image-processing/">Image Processing</a></p>
+<h3 id="31-organization-of-content-source">3.1 Organization of Content Source</h3>
+<p>In Hugo, your content should be organized in a manner that reflects the rendered website.</p>
+<p>While Hugo supports content nested at any level, the top levels (i.e. <code>content/&lt;DIRECTORIES&gt;</code>) are special in Hugo and are considered the content to determine layouts etc.</p>
+<p><a href="https://gohugo.io/content-management/sections/">sections</a></p>
+<p>Without any additional configuration, the following will just work:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+└── content
+    └── about
+    |   └── index.md  // &lt;- https://example.com/about/
+    ├── posts
+    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost/
+    |   ├── happy
+    |   |   └── ness.md  // &lt;- https://example.com/posts/happy/ness/
+    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost/
+    └── quote
+        ├── first.md       // &lt;- https://example.com/quote/first/
+        └── second.md      // &lt;- https://example.com/quote/second/
+</code></pre></div><h3 id="32-path-breakdown-in-hugohttpsgohugoiocontent-managementorganizationpath-breakdown-in-hugo">3.2 <a href="https://gohugo.io/content-management/organization/#path-breakdown-in-hugo">Path Breakdown in Hugo</a></h3>
+<h4 id="index-pages-_indexmd">Index Pages: <code>_index.md</code></h4>
+<p><code>_index.md</code> has a special role in Hugo. It allows you to add front matter and content to your <a href="https://gohugo.io/templates/lists/">list templates</a>.</p>
+<h3 id="33-paths-explained">3.3 Paths Explained</h3>
+<p><a href="https://gohugo.io/content-management/organization/#section">Section</a>: A default content type is determined by a piece of content’s section. <code>section</code> is determined by the location within the project’s <code>content</code> directory. <code>section</code> <em>cannot</em> be specified or overridden in front matter.</p>
+<p><a href="https://gohugo.io/content-management/organization/#path">path</a></p>
+<p><a href="https://gohugo.io/content-management/organization/#url">url</a></p>
+<h2 id="4-content-types">4. Content Types</h2>
+<p>Hugo is build around content organized in sections. A <strong>content type</strong> is a way to organize your content.</p>
+<p><a href="https://gohugo.io/templates/views">Content View Templates</a></p>
+<p><a href="https://gohugo.io/templates/lookup-order/">Hugo&rsquo;s Lookup Order</a></p>
+<h2 id="5-host-on-githubhttpsgohugoiohosting-and-deploymenthosting-on-github">5. <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a></h2>
+<h3 id="51-types-of-github-pages">5.1 Types of GitHub Pages</h3>
+<p>There are 2 types of GitHub Pages:</p>
+<ul>
+<li>User/Organization Pages: <code>https://&lt;Username|Organization&gt;.github.io/</code></li>
+<li>Project Pages: <code>https://&lt;Username|Organization&gt;.github.io/&lt;Project&gt;/</code></li>
+</ul>
+<h3 id="52-github-user-or-organization-pages-httpsgohugoiohosting-and-deploymenthosting-on-githubgithub-user-or-organization-pages">5.2 <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">GitHub User or Organization Pages </a></h3>
+<h3 id="53-github-project-pageshttpsgohugoiohosting-and-deploymenthosting-on-githubgithub-user-or-organization-pages">5.3 <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">GitHub Project Pages</a></h3>
+<blockquote>
+<p>Make sure your <code>baseURL</code> key-value in configuration file reflects the full URL of your GitHub pages repository if you&rsquo;re using the default GitHub Pages URL(e.g. <code>&lt;USERNAME&gt;.github.io/&lt;PROJECT&gt;</code>) and not a custom domain.</p>
+</blockquote>
+<h2 id="reference">Reference</h2>
+<p><a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content">Draft, Future, and Expired Content</a></p>
+<p><a href="https://gohugo.io/getting-started/usage/#deploy-your-website">Deploy Your Website</a></p>
+<p><a href="https://fengberlin.github.io/post/use-hugo-to-build-blog/">使用Hugo搭建个人博客</a></p>
+<p><a href="https://sb.sb/blog/migrate-to-hugo/">使用 Hugo 生成静态博客教程</a></p>
+<p><a href="https://www.gohugo.org/post/coderzh-hugo/">使用hugo搭建个人博客站点</a></p>
+<p><a href="https://juejin.cn/post/6844903856887824398">Hugo创建个人博客指南</a></p>
+<p><a href="https://themes.gohugo.io/hugo-octopress/">Hugo-Octopress</a></p>
+
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">Author&#39;s name</span></span>
+    
+    <time>Dec 15, 2020</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://ylqi007.github.io/tags/hugo">hugo</a>  <a class="category" href="https://ylqi007.github.io/tags/notes">notes</a>  
+    
+    </span>
+  </p>
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://ylqi007.github.io/posts/my-second-post/" title="My Second Post">My Second Post</a>
+    
+
+    
+  </p>
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+      <h1>Sidebar Header</h1>
+    
+
+    <p>
+      
+        Here&rsquo;s a <a href="https://www.google.com">link to google</a>
+<!-- raw HTML omitted -->
+Second line
+<!-- raw HTML omitted -->
+Third line
+This line has two spaces in the end to create a new line using markdown
+Forth line
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      <a target="_blank" href="https://github.com/parsiya/" title="https://github.com/parsiya/"><i class="fa fa-github fa-3x"></i></a>
+      <a target="_blank" href="https://bitbucket.org/parsiya/" title="https://bitbucket.org/parsiya/"><i class="fa fa-bitbucket fa-3x"></i></a>
+      
+      <a target="_blank" href="https://twitter.com/cryptogangsta/" title="https://twitter.com/cryptogangsta/"><i class="fa fa-twitter fa-3x"></i></a>
+      
+        <a target="_blank" href="https://keybase.io/parsiya/" title="https://keybase.io/parsiya/"><i class="fa fa-keybase fa-3x"></i></a> 
+      
+      
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+    
+      <section class="odd">
+        
+          <h1>Sidebar Links</h1>
+        
+        
+          <li>
+            <a href="https://ylqi007.github.io/categories/hugo/" title="Hugo" >Hugo</a>
+          </li>
+        
+          <li>
+            <a href="https://ylqi007.github.io/" title="Homepage" >Homepage</a>
+          </li>
+        
+          <li>
+            <a href="https://www.google.com" title="Google" >Google</a>
+          </li>
+        
+      </section>
+    
+  
+
+  
+  
+  
+    
+      <section class="even">
+        <h1>Recent Posts</h1>
+        <ul id="recent_posts">
+          
+          
+        </ul>
+      </section>
+    
+  
+</aside>
+
+  </div>
+</div>
+
+    <footer role="contentinfo">
+      <p>Copyright &copy; 2020 Author&#39;s name - <a href="https://ylqi007.github.io/license/">License</a> -
+        <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+      </p>
+    </footer>
+
+    
+    
+    
+
+    
+  </body>
+</html>
+

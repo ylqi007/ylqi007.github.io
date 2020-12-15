@@ -6,9 +6,28 @@
     <description>Recent content in Tags on My New Hugo Site - Octopress</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 15 Dec 2020 10:57:48 -0600</lastBuildDate>
     
 	<atom:link href="https://ylqi007.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo</title>
+      <link>https://ylqi007.github.io/tags/hugo/</link>
+      <pubDate>Tue, 15 Dec 2020 10:57:48 -0600</pubDate>
+      
+      <guid>https://ylqi007.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://ylqi007.github.io/tags/notes/</link>
+      <pubDate>Tue, 15 Dec 2020 10:57:48 -0600</pubDate>
+      
+      <guid>https://ylqi007.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
